@@ -4,7 +4,12 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/solnsumei/config"
 )
+
+func init() {
+	config.LoadConfig()
+}
 
 func main() {
 	router := gin.Default()
